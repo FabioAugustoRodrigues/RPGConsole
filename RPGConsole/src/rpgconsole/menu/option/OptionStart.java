@@ -3,6 +3,7 @@ package rpgconsole.menu.option;
 import java.util.Scanner;
 import rpgconsole.RPGConsole;
 import rpgconsole.character.Player;
+import rpgconsole.menu.MenuStandard;
 
 public class OptionStart extends OptionAbstract {
 
@@ -14,10 +15,10 @@ public class OptionStart extends OptionAbstract {
     @Override
     public void execute() {
         Scanner scanner = new Scanner(System.in);
-        System.out.println("What are your name? ");
+        System.out.print("Choose a name: ");
         name = scanner.next();
         
-        RPGConsole.player = new Player(name);   
-    }
-    
+        RPGConsole.player = new Player(name);
+        RPGConsole.currentMenu = new MenuStandard();
+    }   
 }

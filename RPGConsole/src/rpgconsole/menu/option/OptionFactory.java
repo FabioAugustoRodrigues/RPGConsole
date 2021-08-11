@@ -8,6 +8,10 @@ public class OptionFactory {
     
     public OptionFactory(){
         options.add(new OptionStart());
+        options.add(new OptionExit());
+        options.add(new OptionSeeExampleMap());
+        options.add(new OptionMoveAroundMap());
+        options.add(new OptionBack());
     }
     
     public OptionAbstract getOption(String name){
