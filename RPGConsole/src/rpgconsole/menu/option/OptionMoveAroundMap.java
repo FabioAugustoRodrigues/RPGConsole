@@ -14,7 +14,8 @@ public class OptionMoveAroundMap extends OptionAbstract{
     public void execute() {
         Scanner scanner = new Scanner(System.in);
         
-        RPGConsole.currentMap.moveToPosition(0, 0, 0, 0);
+        RPGConsole.currentMap.moveToPosition(RPGConsole.player.pos_x, RPGConsole.player.pos_y, RPGConsole.player.pos_x, RPGConsole.player.pos_y);
+        
         boolean loop = true;
         
         while (loop){
